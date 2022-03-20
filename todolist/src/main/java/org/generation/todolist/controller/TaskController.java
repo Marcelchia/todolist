@@ -28,10 +28,10 @@ public class TaskController {
 	// the current origin.
 	@GetMapping("/all") // a naming "/all" is given
 	//GetMapping is the route that correspond to the HTTP GET method calls from the client.
-
-	public Iterable<Tasks> getItems() {
-		return TaskService.all();   //calling a method all() in the service package - ItemService interface
+	public Iterable<Tasks> getTasks() {
+		return itemService.all();
 	}
+//calling a method all() in the service package - ItemService interface
 
 	@CrossOrigin
 	@GetMapping("/{id}")
